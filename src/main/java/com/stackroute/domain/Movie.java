@@ -1,12 +1,14 @@
 package com.stackroute.domain;
 
 public class Movie {
+    //object of actor
     Actor actor;
-
+    //setactor method
     public void setActor(Actor actor) {
         this.actor = actor;
     }
 
+    //displaying all the values of actor
     public void display()
     {
         System.out.println("The name of the actor is "+ actor.getName()+

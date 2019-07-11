@@ -3,13 +3,56 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!--    actor bean with name initialization-->
+    <bean id ="actor1" class="com.stackroute.domain.Actor">
+        <constructor-arg name="name" value="Maisie Williams"></constructor-arg>
+        <constructor-arg name="gender" value="Female"></constructor-arg>
+        <constructor-arg name="age" value="27"></constructor-arg>
+    </bean>
 
-    <bean id="movie" class="com.stackroute.domain.Movie">
+<!--    actor bean with index initialization-->
+    <bean id ="actor2" class="com.stackroute.domain.Actor">
+        <constructor-arg index="0" value="Sophie turner"></constructor-arg>
+        <constructor-arg index="1" value="Female"></constructor-arg>
+        <constructor-arg index="2" value="21"></constructor-arg>
+    </bean>
+
+<!--    actor bean with type initialization-->
+    <bean id ="actor3" class="com.stackroute.domain.Actor">
+        <constructor-arg type="java.lang.String" value="Kit Harrington"></constructor-arg>
+        <constructor-arg type="java.lang.String" value="Male"></constructor-arg>
+        <constructor-arg type="int" value="32"></constructor-arg>
+    </bean>
+
+<!--   movie bean 1 -->
+    <bean id="movie1" class="com.stackroute.domain.Movie">
         <property name="actor" >
             <bean id ="actorObject" class="com.stackroute.domain.Actor">
-                <property name="name" value="Arpita"></property>
-                <property name="gender" value="Female"></property>
-                <property name="age" value="22"></property>
+                <constructor-arg name="name" value="Cole Sprouse"></constructor-arg>
+                <constructor-arg name="gender" value="Male"></constructor-arg>
+                <constructor-arg name="age" value="24"></constructor-arg>
+            </bean>
+        </property>
+
+    </bean>
+<!--movie bean 2-->
+    <bean id="movie2" class="com.stackroute.domain.Movie" scope="prototype">
+        <property name="actor" >
+            <bean id ="actorObject1" class="com.stackroute.domain.Actor">
+                <constructor-arg name="name" value="Cole Sprouse"></constructor-arg>
+                <constructor-arg name="gender" value="Male"></constructor-arg>
+                <constructor-arg name="age" value="24"></constructor-arg>
+            </bean>
+        </property>
+    </bean>
+
+<!--    movie bean with two different name values-->
+    <bean name="movieA, movieB" class="com.stackroute.domain.Movie" >
+        <property name="actor" >
+            <bean id ="actorObject1" class="com.stackroute.domain.Actor">
+                <constructor-arg name="name" value="Brad Pitt"></constructor-arg>
+                <constructor-arg name="gender" value="Male"></constructor-arg>
+                <constructor-arg name="age" value="45"></constructor-arg>
             </bean>
         </property>
 
