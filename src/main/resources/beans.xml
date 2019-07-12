@@ -28,6 +28,8 @@
         <constructor-arg name="age" value="19"></constructor-arg>
     </bean>
 
+<!--    BeanLifecycleDemoBean bean definition-->
+    <bean id="bean" class="com.stackroute.domain.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy" > </bean>
 
 </beans>
 
