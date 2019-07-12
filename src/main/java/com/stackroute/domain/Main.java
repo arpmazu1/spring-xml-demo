@@ -14,10 +14,12 @@ public class Main {
 
         // accessing the bean.xml
         ConfigurableApplicationContext configurableApplicationContext = new ClassPathXmlApplicationContext("beans.xml");
+
+        //for BeanLifecycleDemoBean
         BeanLifecycleDemoBean beanLifecycleDemoBean = configurableApplicationContext.getBean("bean", BeanLifecycleDemoBean.class);
+
         //closing down the application
         configurableApplicationContext.registerShutdownHook();
-
 
 
     }
