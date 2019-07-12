@@ -1,9 +1,19 @@
 package com.stackroute.domain;
 
 public class Movie {
+
+
     //object of actor
     Actor actor;
-    //setactor method
+
+    public Movie (){
+
+    }
+
+    public Movie(Actor actor) {
+        this.actor = actor;
+    }
+    //setActor method
     public void setActor(Actor actor) {
         this.actor = actor;
     }
