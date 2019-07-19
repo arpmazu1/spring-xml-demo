@@ -1,12 +1,15 @@
 package com.stackroute.domain;
 
 public class Actor {
+
+    //variables
     private String name;
     private String gender;
     private int age;
 
 
 
+    //setter
     public void setName(String name) {
         this.name = name;
     }
@@ -19,6 +22,7 @@ public class Actor {
         this.age = age;
     }
 
+    //getter
     public String getName() {
         return name;
     }
