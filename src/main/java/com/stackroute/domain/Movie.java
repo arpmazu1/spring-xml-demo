@@ -15,6 +15,7 @@ public class Movie implements ApplicationContextAware, BeanNameAware , BeanFacto
     private ApplicationContext context= null;
     private BeanFactory beanFactory;
 
+    //constructor
     public Movie (){
 
     }
@@ -35,6 +36,7 @@ public class Movie implements ApplicationContextAware, BeanNameAware , BeanFacto
                 "\nThe age of the actor is :"+actor.getAge());
     }
 
+    //setApplicationContext method
     @Override
     public void setApplicationContext(ApplicationContext context) throws BeansException {
         this.context =context;
@@ -48,7 +50,7 @@ public class Movie implements ApplicationContextAware, BeanNameAware , BeanFacto
 
     }
 
-    //
+    //Beanfactory
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         this.beanFactory = beanFactory;
