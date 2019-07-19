@@ -5,7 +5,7 @@ public class Movie {
 
     //object of actor
     Actor actor;
-
+    //constructor
     public Movie (){
 
     }
