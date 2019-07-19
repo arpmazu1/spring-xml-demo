@@ -15,6 +15,7 @@ public class Movie implements ApplicationContextAware, BeanNameAware , BeanFacto
     private ApplicationContext context= null;
     private BeanFactory beanFactory;
 
+    //constructor
     public Movie (){
 
     }
